@@ -31,12 +31,13 @@ export default function ImagePicker({ label, name }) {
       {pickImage && <div className={classes.preview}>
       <Image src={pickImage} alt={name} fill /></div>}
         <input type="file"
-          name={name}
-          id={name}
+          name='image'
+          id='image'
           className={classes.input}
           accept='image/png, image/jpeg'
           ref={fileRef}
           onChange={handleOnChange}
+          required
         />
           <button className={classes.button} onClick={handleClick}>pick an image</button>
         </div>
